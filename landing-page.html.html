@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mortgage Pre-Approval</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BTNHPYYCLD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BTNHPYYCLD');
+  </script>
+  <!-- Facebook Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '101962808699554');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=101962808699554&ev=PageView&noscript=1"/></noscript>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #f7f9fc; margin: 0; padding: 0; color: #333; }
+    header { background-color: #004aad; color: white; padding: 2rem; text-align: center; }
+    .container {
+      max-width: 600px; margin: 2rem auto; padding: 2rem;
+      background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 { margin-top: 0; }
+    form {
+      display: flex; flex-direction: column;
+      position: -webkit-sticky; position: sticky; top: 1rem; z-index: 10;
+      background: white; padding: 1.5rem;
+      border: 1px solid #ddd; border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    label { margin-top: 1rem; font-weight: 600; }
+    input, select, button {
+      padding: 0.75rem; margin-top: 0.5rem;
+      border-radius: 6px; border: 1px solid #ccc;
+    }
+    button {
+      background-color: #004aad; color: white; border: none;
+      margin-top: 1.5rem; font-weight: 600; cursor: pointer;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+    button:hover { background-color: #003a8c; transform: scale(1.05); }
+    .benefits, .testimonial, .trust { margin-top: 2rem; }
+    .benefits ul { padding-left: 1.25rem; }
+    .sticky-footer {
+      position: fixed; bottom: 0; width: 100%;
+      background: #004aad; color: white;
+      text-align: center; padding: 1rem;
+    }
+    .sticky-footer a {
+      color: #fff; text-decoration: underline;
+      font-weight: bold; transition: color 0.2s;
+    }
+    .sticky-footer a:hover { color: #cce4ff; }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const ctaLink = document.querySelector('.sticky-footer a');
+      ctaLink.addEventListener('click', function () {
+        if (typeof gtag === 'function') {
+          gtag('event', 'click', {
+            event_category: 'CTA',
+            event_label: 'Sticky Footer Apply Now'
+          });
+        }
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead');
+        }
+      });
+      const urlParams = new URLSearchParams(window.location.search);
+      const utmFields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+      utmFields.forEach(param => {
+        const value = urlParams.get(param);
+        if (value) {
+          localStorage.setItem(param, value);
+        }
+      });
+      utmFields.forEach(param => {
+        const input = document.querySelector(`input[name="${param}"]`);
+        if (input) {
+          input.value = localStorage.getItem(param) || '';
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Get Pre-Approved for a Mortgage in Just 60 Seconds</h1>
+    <p>Low rates, fast approvals, and expert guidance. Serving homeowners nationwide.</p>
+  </header>
+  <div class="container" id="form">
+    <form onsubmit="gtag('event', 'form_submit', {event_category: 'Lead', event_label: 'Mortgage Form'}); fbq('track', 'Lead');">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required />
+      <label for="zip">ZIP Code</label>
+      <input type="text" id="zip" name="zip" required />
+      <label for="purpose">Loan Purpose</label>
+      <select id="purpose" name="purpose">
+        <option value="purchase">Purchase</option>
+        <option value="refinance">Refinance</option>
+        <option value="cashout">Cash-Out Refi</option>
+      </select>
+      <label for="credit">Credit Score Range</label>
+      <select id="credit" name="credit">
+        <option value="excellent">740+</option>
+        <option value="good">700–739</option>
+        <option value="fair">660–699</option>
+        <option value="poor">Below 660</option>
+      </select>
+      <input type="hidden" name="utm_source">
+      <input type="hidden" name="utm_medium">
+      <input type="hidden" name="utm_campaign">
+      <input type="hidden" name="utm_term">
+      <input type="hidden" name="utm_content">
+      <button type="submit">See My Loan Options</button>
+    </form>
+    <div class="trust">
+      <p>⭐⭐⭐⭐⭐ Average Rating from Homeowners Nationwide</p>
+      <p>NMLS #123456 | Licensed in 48 States</p>
+      <p>Trusted by over 10,000+ clients</p>
+    </div>
+    <div class="benefits">
+      <h2>Why Work With Us?</h2>
+      <ul>
+        <li>✅ Competitive Rates</li>
+        <li>✅ Fast Pre-Approval</li>
+        <li>✅ Nationwide Service</li>
+        <li>✅ FHA, VA, Conventional & Jumbo Loans</li>
+        <li>✅ Personalized Support</li>
+      </ul>
+    </div>
+    <div class="testimonial">
+      <h2>What Our Clients Say</h2>
+      <blockquote>
+        “I got pre-approved within hours and closed in 20 days! Highly recommend.”<br>
+        — <strong>Rachel M., Houston TX</strong>
+      </blockquote>
+    </div>
+  </div>
+  <div class="sticky-footer">
+    Ready to get started? <a href="#form">Apply Now</a>
+  </div>
+</body>
+</html>
